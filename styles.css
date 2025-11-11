@@ -1,0 +1,299 @@
+:root {
+  /* 🎨 Paleta Musicala */
+  --azul-mozart: #0C41C4;
+  --violeta-beethoven: #680DBF;
+  --magenta-brahms: #CE0071;
+  --blanco-debussy: #F9F9F9;
+  --gris-tchaikovsky: #232323;
+
+  /* Colores base */
+  --bg: #FFFFFF;
+  --text: #222;
+  --muted: #666;
+  --card: #FFFFFF;
+  --ring: #0C41C4;
+  --accent: #680DBF;
+  --accent-2: #CE0071;
+  --shadow: 0 10px 24px rgba(0, 0, 0, .08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #f6f7ff, #ffffff 30%);
+}
+
+/* === Layout general === */
+.wrap {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding: 0 20px;
+}
+
+/* === Barra de progreso === */
+#progress-bar {
+  position: fixed;
+  inset: 0 auto auto 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--azul-mozart), var(--violeta-beethoven), var(--magenta-brahms));
+  z-index: 999;
+  transition: width 0.2s ease-out, background 0.4s ease;
+}
+
+/* === Topbar === */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 998;
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+.topbar .wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+  height: 64px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.brand-name {
+  font-weight: 700;
+  color: var(--azul-mozart);
+}
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  margin-left: 14px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav a:hover {
+  background: #f2f5ff;
+  color: var(--azul-mozart);
+}
+.nav a.active {
+  background: #eef1ff;
+  color: var(--azul-mozart);
+}
+
+/* === Hero === */
+.hero {
+  padding: 36px 0 10px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 28px;
+  align-items: center;
+}
+.hero-copy h1 {
+  font-size: 40px;
+  margin: .1em 0;
+}
+.lead {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 52ch;
+}
+.btn-primary {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: var(--azul-mozart);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transition: filter 0.2s, transform 0.2s;
+}
+.btn-primary:hover {
+  filter: brightness(.95);
+  transform: translateY(-2px);
+}
+.hero-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* === Contenido === */
+.content {
+  padding: 24px 0 56px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 20px 20px;
+  box-shadow: var(--shadow);
+  margin: 16px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+.card h2 {
+  margin-top: 0;
+  font-size: 26px;
+}
+.subtle {
+  color: var(--muted);
+  margin-top: -8px;
+}
+
+/* === Tablas y listas === */
+.table-scroll {
+  overflow: auto;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+.tbl th, .tbl td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+.tbl thead th {
+  background: #f7f8ff;
+  color: #2b2b2b;
+  position: sticky;
+  top: 0;
+}
+.tbl tbody tr:hover {
+  background: #fafbff;
+}
+
+.levels {
+  margin: 0;
+  padding-left: 18px;
+}
+.levels li {
+  margin: 8px 0;
+}
+.check, .bullets {
+  padding-left: 18px;
+}
+.check li, .bullets li {
+  margin: 8px 0;
+}
+
+/* === Notas y recuadros === */
+.note {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-left: 4px solid var(--azul-mozart);
+  background: #f7f9ff;
+  border-radius: 8px;
+}
+.callout {
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px dashed var(--accent);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fbf7ff, #fff);
+}
+
+/* === Video === */
+.video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: var(--shadow);
+}
+.video-wrap iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* === Botones auxiliares === */
+.btn-ghost {
+  display: inline-block;
+  margin: 10px auto 0;
+  padding: 10px 16px;
+  border: 1px solid #e3e6ff;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #2b2b2b;
+  transition: background 0.2s;
+}
+.btn-ghost:hover {
+  background: #f6f8ff;
+}
+
+/* === Footer === */
+.site-footer {
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+.site-footer .foot {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+}
+
+/* === Animaciones de aparición === */
+.fade {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Responsivo === */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    display: none;
+  }
+  .hero-copy h1 {
+    font-size: 32px;
+  }
+  .lead {
+    font-size: 16px;
+  }
+}
