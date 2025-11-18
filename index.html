@@ -135,6 +135,37 @@
         <li><strong>Nivel 2:</strong> repite los grupos un poco más rápido, pero sin perder suavidad.</li>
         <li><strong>Nivel 3:</strong> combina varios grupos seguidos, alternando suave y un poco más duro para jugar con el peso del brazo.</li>
       </ol>
+
+      <!-- Checklist de niveles -->
+      <div class="note levels-checklist">
+        <h3>✅ Tu avance</h3>
+        <p class="subtle">
+          Marca los niveles que ya sientes estables.
+        </p>
+        <ul class="checklist" id="levels-checklist">
+          <li>
+            <label>
+              <input type="checkbox" data-level="1" />
+              Nivel 1 dominado: puedo tocar despacio, sin rigidez y con sonido parejo.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" data-level="2" />
+              Nivel 2 dominado: mantengo suavidad incluso un poco más rápido.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" data-level="3" />
+              Nivel 3 dominado: combino varios grupos seguidos sin perder control ni relajar la mano.
+            </label>
+          </li>
+        </ul>
+        <p class="micro-copy" id="levels-message">
+          Cuando vayas marcando, podrás ver tu progreso sin necesidad de memorizarlo todo.
+        </p>
+      </div>
     </section>
 
     <section id="tips" class="card tips">
@@ -144,6 +175,18 @@
         <li><strong>Escucha tu sonido:</strong> busca que todas las teclas suenen parejo, ni muy fuerte ni muy suave.</li>
         <li><strong>Constancia:</strong> unos minutos al día valen más que una práctica larga con cansancio.</li>
       </ul>
+
+      <!-- Qué evitar -->
+      <div class="note warning">
+        <h3>⚠️ Qué evitar</h3>
+        <ul class="bullets">
+          <li><strong>No empujes la muñeca hacia abajo:</strong> deja que la mano flote, no se hunda.</li>
+          <li><strong>No aprietes las teclas:</strong> piensa en apoyar el peso del brazo, no en hacer fuerza con los dedos.</li>
+          <li><strong>No levantes todos los dedos a la vez:</strong> solo se mueve el que toca; los demás descansan sobre las teclas.</li>
+          <li><strong>No ignores el cansancio:</strong> si duele o se tensa demasiado, para, sacude las manos y vuelve más suave.</li>
+        </ul>
+      </div>
+
       <div class="callout">
         🎶 Dato Musicala: tus manos también “aprenden” por sensación.  
         Cuando repites con atención y calma, tus dedos recuerdan el movimiento sin necesidad de pensar tanto.
@@ -154,18 +197,87 @@
     <section id="video" class="card">
       <h2>🎬 Video guía</h2>
       <p class="subtle">
-        Observa el siguiente video y fíjate en la posición de la mano sobre las teclas negras y blancas.  
-        Luego intenta repetir los movimientos despacio, buscando esa sensación de comodidad y equilibrio.
+        Observa primero el video general y, si quieres profundizar, revisa también los videos por tipo de ejercicio
+        (dobles, intermedios y extremos).  
+        Fíjate siempre en la posición de la mano sobre las teclas negras y blancas y en que la mano se mantenga relajada.
       </p>
-      <div class="video-wrap">
-        <iframe
-          src="https://www.youtube.com/embed/KnxqZJ88V68?si=-Hz-hV0ZGH9c3PZZ"
-          title="Gimnasia Dactilar para Piano - Video"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
+
+      <!-- Tabs para los videos -->
+      <div class="video-tabs" role="tablist" aria-label="Videos guía por tipo de ejercicio">
+        <button class="video-tab is-active" data-video="general" role="tab" aria-selected="true">
+          General
+        </button>
+        <button class="video-tab" data-video="dobles" role="tab" aria-selected="false">
+          Dobles
+        </button>
+        <button class="video-tab" data-video="intermedios" role="tab" aria-selected="false">
+          Intermedios
+        </button>
+        <button class="video-tab" data-video="extremos" role="tab" aria-selected="false">
+          Extremos
+        </button>
+      </div>
+
+      <div class="video-panels">
+        <!-- Panel general -->
+        <div class="video-panel is-active" data-video-panel="general">
+          <h3>📌 Explicación general</h3>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/KnxqZJ88V68?si=-Hz-hV0ZGH9c3PZZ"
+              title="Gimnasia Dactilar para Piano - Video general"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Panel dobles -->
+        <div class="video-panel" data-video-panel="dobles">
+          <h3>➕ Dedos dobles (12 - 23 - 34 - 45)</h3>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/Gb6cY98Xqko"
+              title="Gimnasia Dactilar - Dedos dobles"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Panel intermedios -->
+        <div class="video-panel" data-video-panel="intermedios">
+          <h3>🎯 Dedos intermedios (13 - 24 - 35)</h3>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/u2f7BEoAGts"
+              title="Gimnasia Dactilar - Dedos intermedios"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Panel extremos -->
+        <div class="video-panel" data-video-panel="extremos">
+          <h3>🌈 Dedos extremos (14 - 25 - 15)</h3>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/lZFde4fvj_w"
+              title="Gimnasia Dactilar - Dedos extremos"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
       </div>
     </section>
 
